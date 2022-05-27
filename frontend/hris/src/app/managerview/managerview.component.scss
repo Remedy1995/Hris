@@ -1,0 +1,28 @@
+#card-center{
+    border: 2px solid #f7f3f3;
+    border-radius: 12px;
+    width: 40%;
+    height: 230px;
+    margin-left: -170px;
+    margin-top: 30px;
+}
+.bio{
+    text-align: center;
+    font-size: 30px;
+    font-family: bold;
+    margin-left: -60px;
+    text-transform: capitalize;
+
+}
+
+div.card1{
+    position: relative;
+    left: -80px;
+}
+div.alert.alert-primary {
+    width: 800px;
+    margin: 10px;
+    text-align: left;
+    font-weight: bold;
+    background: antiquewhite;
+}

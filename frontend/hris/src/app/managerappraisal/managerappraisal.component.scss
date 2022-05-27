@@ -1,0 +1,35 @@
+.submit{
+        -webkit-appearance: none;
+        color: #ffffff;
+        text-transform: capitalize;
+        display: inline-block;
+        background: #B52E31;
+        padding: 10px 20px;
+        transition: 0.5s ease;
+        -moz-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
+        -webkit-transition: 0.5s ease;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        margin-bottom: 5px;
+        border-radius: 20px;
+}
+
+
+div.alert.alert-primary {
+    width: 850px;
+    margin: 10px;
+    margin-top: -15px;
+    text-align: left;
+    font-weight: bold;
+    background: antiquewhite;
+}
+span{
+    font-weight: 700;
+    font-size: 17px;
+}
+.inline{
+    display: flex;
+}

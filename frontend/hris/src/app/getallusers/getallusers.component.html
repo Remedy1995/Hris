@@ -1,0 +1,71 @@
+<body>
+    <div class="page-container">
+    <!--/content-inner-->
+     <div class="left-content">
+        <div class="inner-content">
+         <!-- header-starts -->
+             <div class="header-section">
+             <!-- top_bg -->
+                        <app-header></app-header>
+                         <br>
+                   <div class="container">
+
+                    <div class="row">
+                        <div class="alert alert-primary" role="alert">
+                        All Users
+                          </div>
+                          
+                        <div class="col-sm-8">
+                            <div class="alert alert-success" role="alert" *ngIf="successmessage">
+                                {{successmessage}}
+                              </div>
+                           <table class="table table-bordered">
+                        <thead>
+
+                            <tr>
+                                
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">username</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Delete</th>
+                                <th scope="col">Update</th>
+                                <th scope="col">View</th>
+                            </tr>
+                        </thead>
+                         <tbody>
+                             <tr *ngFor='let all of alluser'>
+                                 <th>{{all.firstname}}</th>
+                                 <td>{{all.lastname}}</td>
+                                 <td>{{all.username}}</td>
+                                 <td>{{all.email}}</td>
+                                 <td><button class="btn btn-danger"  (click) ="delete(all._id)">Delete</button></td>
+                                 <td><a [routerLink]="['/manageredit',all._id]" class="btn btn-primary">Update</a></td>
+                                 <td><a [routerLink]="['/managerview',all._id]" class="btn btn-success">View</a></td>
+                             </tr>
+                         </tbody>
+
+
+
+                           </table>
+                              
+                        </div>
+                       
+                    </div>
+                   </div>
+                    
+       
+                      
+             </div>
+         </div>
+             </div>
+             <!--content-->
+         </div>
+ 
+                 <!--//content-inner-->
+             <!--/sidebar-menu-->
+             <app-managersidebar></app-managersidebar>
+                               <div class="clearfix"></div>		
+                            
+                             
+ </body>

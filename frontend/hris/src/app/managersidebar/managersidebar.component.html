@@ -1,0 +1,21 @@
+<div class="sidebar-menu">
+    <header class="logo1">
+        <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> 
+    </header>
+        <div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"></div>
+           <div class="menu">
+                    <ul id="menu" >
+                        <li><a [routerLink]="['/managerdashboard']"><i class="fa fa-tachometer"></i> <span>Home</span></a></li>
+                         <li id="menu-academico" ><a [routerLink]="['/getallusers']"><i class="fa fa-table"></i> <span> Get all users</span></a>
+                          
+                        </li>
+                         <li id="menu-academico" ><a [routerLink]="['/lineappraisal']"><i class="fa fa-file-text-o"></i> <span>Give Appraisal</span></a></li>
+  
+                
+                     
+                    <li><a (click)="logout()"><i class="lnr lnr-chart-bars"></i> <span>Logout</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+                      
+                    </li>
+                  </ul>
+                </div>
+              </div>

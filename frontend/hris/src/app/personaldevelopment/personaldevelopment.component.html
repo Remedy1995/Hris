@@ -1,0 +1,94 @@
+<body>
+    <div class="page-container">
+    <!--/content-inner-->
+     <div class="left-content">
+        <div class="inner-content">
+         <!-- header-starts -->
+             <div class="header-section">
+             <!-- top_bg -->
+                         <app-header></app-header>
+                         <br>
+                   <div class="container">
+
+                    <div class="row">
+                        <div class="alert alert-primary" role="alert">
+                          Personal Development
+                          </div>
+                          <div class="alert alert-danger" role="alert" *ngIf="errormessage">
+                            {{errormessage}}
+                          </div>
+                          <div class="alert alert-success" role="alert" *ngIf="successmessage">
+                            {{successmessage}}
+                          </div>
+                        <div class="col-sm-6">
+                            <form [formGroup]="EmployeeForm2" >
+                            <div class="mb-3">
+                              
+                                <label for="exampleFormControlInput1" class="form-label">Employee Full Name</label>
+ 
+                                <select class="form-control" aria-label="Default select example" formControlName="fullname">
+                                    <option selected>Open this select menu</option>
+                                    <option value={{getfullname}}>{{getfullname}}</option>
+            
+                                  </select>
+                              </div>
+                              <div class="mb-3"> 
+                                
+                            
+                            
+                              
+                                <label for="exampleFormControlTextarea1" class="form-label"> Personal learning and development goals</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="Personal_learning_and_devt_goals" rows="2"></textarea>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Manager Support</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="Manager_support" rows="2"></textarea>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Activity to achieve goal</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="Activity_to_achieve_goal" rows="3"></textarea>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">  Job holder comment</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="Job_holder_comment" rows="3"></textarea>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Score </label>
+                                <select class="form-control" aria-label="Default select example" formControlName="score">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                    <option value="4">four</option>
+                                    <option value="5">five</option>
+                                  </select>
+                              </div>
+
+                              <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Rating</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rating" formControlName="rating">
+                              </div>
+                              <br>
+                              <div class="mb-3">
+                                <button class="btn btn-primary" type="submit" (click)="personaldevelopment()">Submit </button>
+                              </div>
+                              
+                              <div class="col-sm-6"></div>
+                               </form>
+                              
+                        </div>
+                       
+                    </div>
+                   </div>
+                    
+       
+                        
+             </div>
+         </div>
+             </div>
+             <!--content-->
+         </div>
+         <app-employeesidebar></app-employeesidebar>
+                               <div class="clearfix"></div>		
+                      
+ </body>

@@ -1,0 +1,47 @@
+<body>
+    <div class="page-container">
+    <!--/content-inner-->
+     <div class="left-content">
+        <div class="inner-content">
+         <!-- header-starts -->
+             <div class="header-section">
+             <!-- top_bg -->
+                        <app-header></app-header>
+                         <br>
+                   <div class="container">
+                    <div class="row">
+                    <div class="alert alert-primary" role="alert">
+                     View User Information
+                    </div>
+                          
+                        <div class="col-sm-4">
+                       
+                        </div>
+                       <div class="col-sm-4">
+                         <div class="card1">
+                            <h3 class="bio">{{viewdata?.firstname}}  {{viewdata?.lastname}}</h3>
+                             <p><span style="font-weight:bold;">Username:&nbsp;&nbsp;&nbsp;</span>{{viewdata?.username}}</p>
+                             <p><span style="font-weight:bold;">Email address:</span>&nbsp;{{viewdata?.email}}</p>
+                             <p><span style="font-weight:bold;">Date of Birth:</span>&nbsp;{{viewdata?.dob}}</p>
+                             
+                         </div>  
+                       </div>
+                       <div class="col-sm-4"></div>
+                       </div>
+                        </div>
+                    
+       
+                        
+             </div>
+         </div>
+             </div>
+             <!--content-->
+         </div>
+ 
+                 <!--//content-inner-->
+         <app-managersidebar></app-managersidebar>
+             
+                               <div class="clearfix"></div>		
+                            
+                             
+ </body>

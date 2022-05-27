@@ -1,0 +1,92 @@
+<body>
+    <div class="page-container">
+    <!--/content-inner-->
+     <div class="left-content">
+        <div class="inner-content">
+         <!-- header-starts -->
+        <app-header></app-header>
+                         <br>
+                   <div class="container">
+                    <div class="row">
+                    <div class="alert alert-primary" role="alert">
+                  View Information
+                    </div>
+                          
+                      
+                       
+                       </div>
+                        </div>
+                          
+                        <div class="col-sm-12">
+                            <h2>Performance Objectives & Personal Development Objectives </h2>
+
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    
+                                    <div class="col-sm-6">
+                                        <div>
+                                            <span>Full Name : </span ><p>{{performance?.fullname}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Performance Goals :</span> <p>{{performance?.performance_goals}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Key Performance Measures: </span ><p>{{performance?.key_performance_measures}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Job holder Comment : </span ><p>{{performance?.Job_holder_comment}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Rating: </span ><p>{{performance?.rating}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Score: </span ><p>{{performance?.score}}</p>
+                                        </div>
+                                        <div >
+                                            <span >Line Manager Appraisal: </span ><p style="background: #e2f1ea;"  *ngIf="performance?.checkappraisal==='Yes'">{{performance?.appraisalinformation}}</p>
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div>
+                                            <span>Full Name : </span ><p>{{personaldevelopment?.fullname}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Personal learning and devt goals :</span> <p>{{personaldevelopment?.Personal_learning_and_devt_goals}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Manager support: </span ><p>{{personaldevelopment?.Manager_support}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Activity to achieve goal : </span ><p>{{personaldevelopment?.Activity_to_achieve_goal}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Rating: </span ><p>{{personaldevelopment?.rating}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Score: </span ><p>{{personaldevelopment?.score}}</p>
+                                        </div>
+                                       
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+             </div>
+         </div>
+             </div>
+
+             <!--content-->
+        
+ 
+                 <!--//content-inner-->
+                 <app-employeesidebar></app-employeesidebar>
+               
+                               <div class="clearfix"></div>		
+                            
+                           
+ </body>

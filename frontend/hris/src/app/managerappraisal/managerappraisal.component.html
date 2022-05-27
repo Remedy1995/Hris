@@ -1,0 +1,128 @@
+<body>
+    <div class="page-container">
+    <!--/content-inner-->
+     <div class="left-content">
+        <div class="inner-content">
+         <!-- header-starts -->
+             <div class="header-section">
+             <!-- top_bg -->
+                       <app-header></app-header>
+                         <br>
+                   <div class="container">
+                    <div class="row">
+                    <div class="alert alert-primary" role="alert">
+                    Line Manager Appraisal
+                    </div>
+                          
+                      
+                       
+                       </div>
+                        </div>
+                          
+                        <div class="col-sm-12" style="position: relative;
+                        top: -25px;">
+                            <h2>Performance Objectives & Personal Development Objectives </h2>
+
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="alert alert-danger" role="alert" *ngIf="errormessage">
+                                        {{errormessage}}
+                                      </div>
+                                      <div class="alert alert-success" role="alert" *ngIf="successmessage">
+                                        {{successmessage}}
+                                      </div>
+                                    <div class="col-sm-6">
+                                        <div>
+                                            <span>Full Name : </span ><p *ngIf="viewdata?.fullname===undefined"></p>
+                                                <p *ngIf="viewdata?.fullname!=='undefined'">{{viewdata?.fullname}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Performance Goals :</span> <p>{{viewdata?.performance_goals}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Key Performance Measures: </span ><p>{{viewdata?.key_performance_measures}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Job holder Comment : </span ><p>{{viewdata?.Job_holder_comment}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Rating: </span ><p>{{viewdata?.rating}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Score: </span ><p>{{viewdata?.score}}</p>
+                                        </div>
+                                        <div *ngIf="viewdata?.checkappraisal==='Yes'">
+                                            <span >Line Manager Appraisal: </span ><p style="background: #e2f1ea;">{{viewdata?.appraisalinformation}}</p>
+                                        </div>
+                                        <div>
+                                            <form [formGroup]="AppraisalForm">
+                                                <label>Add Line Manager's Appraisal?</label>
+                                                <div class="inline">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" value="Yes" id="flexRadioDefault1" formControlName="checkappraisal" (change)="checkappraisal()">
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                      Yes
+                                                    </label>
+                                                  </div>
+                                                  &nbsp;&nbsp;&nbsp;
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio"  id="flexRadioDefault2" value="No" formControlName="checkappraisal" (change)="checkappraisal()">
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                      No
+                                                    </label>
+                                                  </div>
+                                                  </div>
+                                                 <div *ngIf="getAppraisalfield">
+                                                    <div class="mb-3">
+                                                    <label for="exampleFormControlTextarea1" class="form-label">Appraisal information</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="appraisalinformation" rows="2"></textarea>
+                                                  </div>
+                                                  <br>
+                                                    <input type="submit" value="Submit Appraisal" class="submit" (click)="submit()">
+                                                 </div>
+                                                
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div>
+                                            <span>Full Name : </span ><p *ngIf="personaldata?.firstname==='undefined'"></p>
+                                                <p *ngIf="personaldata?.firstname!=='undefined'">{{personaldata?.fullname}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Personal learning and devt goals :</span> <p>{{personaldata?.Personal_learning_and_devt_goals}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Manager support: </span ><p>{{personaldata?.Manager_support}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Activity to achieve goal : </span ><p>{{personaldata?.Activity_to_achieve_goal}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Rating: </span ><p>{{personaldata?.rating}}</p>
+                                        </div>
+                                        <div>
+                                            <span>Score: </span ><p>{{personaldata?.score}}</p>
+                                        </div>
+                                       
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+             </div>
+         </div>
+             </div>
+
+             <!--content-->
+         </div>
+ 
+                 <!--//content-inner-->
+             <!--/sidebar-menu-->
+             <app-managersidebar></app-managersidebar>
+                               <div class="clearfix"></div>		
+                            
+                            
+ </body>
