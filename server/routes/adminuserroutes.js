@@ -15,7 +15,7 @@ router.post('/managerlogin',function(req,res){
 CreateAdminUser();
 
  const username=req.body.username;
- const password=md5(req.body.password);
+ const password=(req.body.password);
     CreateAdminUser.findOne({username:username},function(err,founduser){
       if(!founduser){
         console.log("wrong username")
